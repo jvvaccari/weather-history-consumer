@@ -47,6 +47,13 @@ public class WeatherData {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
     private LocalDateTime registeredAt;
 
+    @JsonProperty("latitude")
+    private double latitude;
+
+    @JsonProperty("longitude")
+    private double longitude;
+
+
     // getters e setters
 
     public LocalDateTime getRegisteredAt() { return registeredAt; }
@@ -87,4 +94,21 @@ public class WeatherData {
 
     public double getVisibility() { return visibility; }
     public void setVisibility(double visibility) { this.visibility = visibility; }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
 }
